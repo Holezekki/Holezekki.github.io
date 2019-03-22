@@ -1,0 +1,99 @@
+h1 {
+    font-family: fantasy, sans-serif ;
+}
+h3 {
+    font-family: serif;
+}
+body {
+    background-image: url(Ravintola_gimp.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    text-align: center;
+    font-size: 20px;}
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+      }
+      
+      li {
+        float: left;
+      }
+      
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      li a:hover {
+        background-color: #111;
+      }
+      h4 {
+        font-family: fantasy;
+        font-size: 25px;
+      }
+
+.Ruokalista { grid-area: header; }
+.Maanantai { grid-area: ma; }
+.Tiistai { grid-area: ti; }
+.Keskiviikko { grid-area: ke; }
+.Torstai { grid-area: to; }
+.Perjantai { grid-area: pe;}
+.Yhteystiedot { grid-area: yht}
+/* .grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'ma ma ke ke pe pe'
+    'ti ti to to yht yht'
+    'alue alue alue alue alue alue';
+  grid-gap: 10px;
+  padding: 10px;
+} */
+
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  border: 3px solid #333;
+  background-color: rgba(0,0 , 0, 0.3);
+  
+}
+
+@media screen and (min-width:481px) {
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      'header header header header header header'
+      'ma ma ke ke pe pe'
+      'ti ti to to yht yht'
+      'alue alue alue alue alue alue';
+    grid-gap: 10px;
+    padding: 10px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px){
+ .grid-container{
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+    font-size: 10px;
+    }
+
+  aside {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 320px){
+  .grid-container {
+    width: 320px;
+  }
+}
